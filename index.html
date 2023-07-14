@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="image/png" href="icon.png" />
+    <title>Base convertor</title>
+</head>
+
+<body>
+    <section class="left-margin"></section>
+    <main class="main-body">
+        <h1>Base Convertor</h1>
+
+        <label class="base-selector base-input">
+            Select input Base
+            <select name="base-input">
+                <option value="2">base-2 (Binaries)</option>
+                <option value="8">base-8 (Octals)</option>
+                <option value="10">base-10 (Decimals)</option>
+                <option value="16">base-16 (Hexadecimals)</option>
+            </select>
+        </label>
+
+        <label class="base-selector base-output">
+            Select output Base
+            <select name="base-output">
+                <option value="2">base-2 (Binaries)</option>
+                <option value="8">base-8 (Octals)</option>
+                <option value="10">base-10 (Decimals)</option>
+                <option value="16">base-16 (Hexadecimals)</option>
+            </select>
+        </label>
+
+        <div class="top-bottom-marin input-field">
+            <label for="input-field">Input:</label>
+            <input name="input-field" id="input-field">
+
+            <button id="calculate-button">
+                <p>Calculate</p>
+            </button>
+        </div>
+
+        <div class="top-bottom-marin">
+            <p>Output:</p>
+            <div class="output">
+                <p id="output">0</p>
+            </div>
+
+        </div>
+
+        <footer class="top-bottom-margin"><a href="https://github.com/ZiedDev">© Zied</a></footer>
+    </main>
+    <section class="right-margin"></section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

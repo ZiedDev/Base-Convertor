@@ -1,0 +1,199 @@
+:root {
+    --shadow-color: 215deg 31% 43%;
+    --shadow-elevation-low:
+        0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.27),
+        0.5px 1px 1.5px -0.6px hsl(var(--shadow-color) / 0.44),
+        1.3px 2.5px 3.7px -1.3px hsl(var(--shadow-color) / 0.6);
+    --shadow-elevation-medium:
+        0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.23),
+        1px 1.9px 2.8px -0.3px hsl(var(--shadow-color) / 0.31),
+        1.8px 3.7px 5.4px -0.6px hsl(var(--shadow-color) / 0.4),
+        3.4px 6.8px 9.9px -1px hsl(var(--shadow-color) / 0.48),
+        6.3px 12.5px 18.3px -1.3px hsl(var(--shadow-color) / 0.56);
+    --shadow-elevation-high:
+        0.3px 0.5px 0.8px hsl(var(--shadow-color) / 0.21),
+        2.3px 4.7px 6.8px -0.1px hsl(var(--shadow-color) / 0.25),
+        4.2px 8.5px 12.4px -0.3px hsl(var(--shadow-color) / 0.29),
+        6.2px 12.4px 18.1px -0.4px hsl(var(--shadow-color) / 0.33),
+        8.6px 17.2px 25.1px -0.6px hsl(var(--shadow-color) / 0.37),
+        11.7px 23.5px 34.3px -0.7px hsl(var(--shadow-color) / 0.41),
+        15.9px 31.8px 46.4px -0.9px hsl(var(--shadow-color) / 0.45),
+        21.3px 42.7px 62.3px -1px hsl(var(--shadow-color) / 0.48),
+        28.5px 56.9px 83px -1.2px hsl(var(--shadow-color) / 0.52),
+        37.5px 75px 109.4px -1.3px hsl(var(--shadow-color) / 0.56);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12pt;
+    color: #444444;
+    background-color: rgb(231, 241, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* height: 80vh; */
+    width: 100%
+}
+
+.left-margin {
+    flex: 1;
+}
+
+.main-body {
+    text-align: center;
+    flex: 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .main-body h1 {} */
+
+.right-margin {
+    flex: 1;
+}
+
+
+.top-bottom-marin {
+    margin-top: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.base-selector {
+    position: relative;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.base-selector select {
+    display: block;
+    width: 250px;
+    min-height: 35px;
+    background: #eaf5ff;
+    border-radius: 3px;
+    border: 2px solid #0f6bb6;
+    outline: none;
+    padding: 0 20px 0 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.base-selector::after {
+    content: '';
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: #222;
+    display: inline-block;
+    border-radius: 2px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.base-selector .selector-options {
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+    background: #11436b;
+    color: #fff;
+    border-radius: 4px;
+    z-index: 1;
+    width: 96%;
+    position: absolute;
+    left: 2%;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.base-selector .selector-options li {
+    height: 35px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.base-selector .selector-options li:hover {
+    background: #03A9F4;
+}
+
+.input-field input {
+    display: block;
+    width: 250px;
+    min-height: 35px;
+    background: #eaf5ff;
+    border-radius: 3px;
+    border: 2px solid #0f6bb6;
+    outline: none;
+    padding: 0 20px 0 10px;
+    margin-top: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.input-field button {
+    min-height: 35px;
+    background: #eaf5ff;
+    border-radius: 3px;
+    border: 2px solid #0f6bb6;
+    outline: none;
+    padding: 0 20px 0 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.output {
+    display: flex;
+}
+
+.output p {
+    max-width: 20rem;
+    font-size: 15pt;
+    flex: auto;
+    word-wrap: break-word;
+}
+
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    color: #004a6f;
+}
+
+a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #004a6f;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
